@@ -483,19 +483,21 @@ void drawTree(BT::ControlNode* tree_)
     int argc = 1;
     char *argv[1] = {const_cast<char*>("")};
 
+
     if (!init)
     {
         XInitThreads();
         glutInit(&argc, argv);
         init = true;
+
         glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE);  //  Antialiasing
-        glEnable(GL_MULTISAMPLE);
+       // glEnable(GL_MULTISAMPLE);
+
     }
+
     tree = tree_;
     depth = tree->Depth();
-
     glutInitWindowSize(1024, 860);
-
     glutCreateWindow("Behavior Tree");  // Create a window
 
     glClearColor(0, 0.71, 0.00, 0.1);

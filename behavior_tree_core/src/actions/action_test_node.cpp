@@ -42,6 +42,7 @@ void BT::ActionTestNode::WaitForTick()
         while (get_status() != BT::HALTED && i++ < time_)
         {
             DEBUG_STDOUT(" Action " << get_name() << "running! Thread id:" << std::this_thread::get_id());
+            std::cout<<" calling action server here"<<std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         if (get_status() != BT::HALTED)

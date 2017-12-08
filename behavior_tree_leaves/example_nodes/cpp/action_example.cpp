@@ -106,7 +106,7 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "action");
     ROS_INFO(" Enum: %d", RUNNING);
     ROS_INFO(" Action Ready for Ticks");
-    BTAction bt_action(ros::this_node::getName());
+    BTAction bt_action(ros::this_node::getName());    
     ros::spin();
 
     return 0;

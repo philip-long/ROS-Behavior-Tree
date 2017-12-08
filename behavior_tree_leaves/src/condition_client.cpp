@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 
     // create the action client
     // true causes the client to spin its own thread
-    actionlib::SimpleActionClient<behavior_tree_core::BTAction> ac("condition", true);
+    actionlib::SimpleActionClient<behavior_tree_core::BTAction> ac("object_in_reach", true);
     behavior_tree_core::BTResult node_result;
     ROS_INFO("Waiting for action server to start.");
     // wait for the action server to start
